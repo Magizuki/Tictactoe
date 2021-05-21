@@ -93,7 +93,7 @@ function back()
   $('#backBtn2').click(function(e){
       console.log("dsadasd")
       // e.preventDefault()
-      window.location.href = "tictactoe.html"
+      window.location.href = "https://magizuki.github.io/Tictactoe/"
   })
 }
 
@@ -239,7 +239,7 @@ function resetBoard()
 $('#board').hide()
 
 $('#backBtn').click(function(){
-    window.location.href = "tictactoe.html"
+    window.location.href = "https://magizuki.github.io/Tictactoe/"
 })
 
 //   $(document).ready(function() {
