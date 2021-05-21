@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tictactoe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <br>
+    <h1 style="text-align: center;">TICTACTOE</h1>
+    <h3 style="text-align: center;">Player Vs Player</h3>
+    <br>
+
+    <!-- Main Menu -->
+    <div style="margin: auto; text-align: center;" id="MainMenu">
+        <button id="small" class="btn btn-primary">3 X 3</button>
+        <!-- <br>
+        <br>
+        <button id="medium" class="btn btn-primary">6 X 6</button>
+        <br>
+        <br>
+        <button id="large" class="btn btn-primary">9 X 9</button> -->
+    </div>
+
+    <!-- Game Board -->
+    <div id="board" style="text-align: center;">
+        <button id="backBtn" class="btn btn-warning">BACK TO MENU</button>
+        <br>
+        <br>
+        <h1 id="turn"></h1>
+        <br>
+        <div id="smallBoard" class="h-100" style="margin: auto; width: 500px;">
+            <div class="card-group" style="height: 150px;">
+                <div class="card" >
+                  <div id="board11" class="card-body">
+                      <button class="btn btn-info"  onclick="boardClicked(1,1)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board12" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(1,2)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board13" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(1,3)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card-group" style="height: 150px;">
+                <div class="card">
+                  <div id="board21" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(2,1)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board22" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(2,2)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board23" class="card-body">
+                    <button class="btn btn-info" onclick="boardClicked(2,3)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card-group" style="height: 150px;">
+                <div class="card">
+                  <div id="board31" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(3,1)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board32" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(3,2)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div id="board33" class="card-body">
+                    <button class="btn btn-info"  onclick="boardClicked(3,3)" style="margin-top: 30px;">Click Here</button>
+                  </div>
+                </div>
+            </div>
+            
+              
+        </div>
+
+        <!-- <div id="mediumBoard">
+            
+        </div>
+
+        <div id="largeBoard">
+            
+        </div> -->
+
+        <br>
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg> : PLAYER 1</h1>
+        
+          <h1><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+          </svg> : PLAYER 2</h1>
+
+    </div>
+    <br>
+    <br>
+    
+    <div id="result" style="text-align: center;">
+    </div>
+
+    <script src="gamelogic.js"></script>
+
+
+</body>
+</html>
