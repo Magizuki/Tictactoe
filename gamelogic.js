@@ -62,7 +62,7 @@ function boardClicked(row, col)
     {
         board[(row-1)][(col-1)] = 1
         var url = 'http://www.w3.org/2000/svg'
-        var logo_p1 ="<h1>"+"<svg xmlns="+url+" width='60' height='60' fill='currentColor' class='bi bi-circle' viewBox='0 0 16 16'>"+
+        var logo_p1 ="<h1 style='margin-top:20px'>"+"<svg xmlns="+url+" width='60' height='60' fill='currentColor' class='bi bi-circle' viewBox='0 0 16 16'>"+
     "<path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>"+"</svg>"+"</h1>"
 
         noPlayer = 1
@@ -73,7 +73,7 @@ function boardClicked(row, col)
     else
     {
       board[(row-1)][(col-1)] = 2
-      var logo_p2 = "<h1><svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'>"+
+      var logo_p2 = "<h1 style='margin-top:20px'><svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'>"+
     "<path d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'/>"
   +"</svg>"+"</h1>"
 
